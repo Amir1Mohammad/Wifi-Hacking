@@ -8,16 +8,14 @@ var = "All User Profile"
 
 a = subprocess.check_output(command_one.split(" ")).decode('utf-8').split('\n')
 a = [i for i in a if "All User Profile" in i]
-
-
-c = 0
+c=0
 for i in a:
-                
-        c+=1        
-        #print i
-        print a
-
-
+        c+=1
+        
+        t = i.split(':')[1].replace('\r', '')
+        t = t.strip()
+        print t
+        
 
 
 
